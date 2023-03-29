@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
-import { Counter } from './components/counter';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { ErrorWrapper, Layout, Header } from './components';
 
-function App() {
-  const [count, setCount] = useState<number>(0);
+const App: React.FunctionComponent = () => {
   return (
-    <>
-      <Counter />
-    </>
+    <BrowserRouter>
+      <ErrorWrapper>
+        <Header />
+        <Layout />
+      </ErrorWrapper>
+    </BrowserRouter>
   );
 }
 
